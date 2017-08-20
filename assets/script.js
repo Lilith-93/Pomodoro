@@ -37,7 +37,7 @@ var sec = 0;
 			time--;
 			sec--;
 			$("#temps").text(min+'min '+sec+'sec.');
-			$(title).text(min+'min '+sec+'sec.');
+			$(title).text(min+"'"+sec+'"');
 			if(time<=0){
 				document.getElementById('alarm').play();
 				clearInterval(inter);
