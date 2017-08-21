@@ -34,19 +34,21 @@ var sec = 0;
 	});	
 	//FONCTION POUR DECREMENTER LE TIMER ET CLEAR L'INTERVAL
 		function count(){
-			time--;
-			sec--;
-			$("#temps").text(min+'min '+sec+'sec.');
-			$(title).text(min+"'"+sec+'"');
 			if(time<=0){
 				document.getElementById('alarm').play();
 				clearInterval(inter);
 				alert('Ton temps est écoulé !');
 			}
+			time--;			
+			sec--;
 			if(sec<0){
 				min--;
 				sec = 59;
 			}
+			$("#temps").text(min+'min '+sec+'sec.');
+			$(title).text(min+"'"+sec+'"');
+			
+			
 		}
 //FONCTION POUR METTRE EN PAUSE AU CLICK DU BOUTON
 	$("#pause").click(function(){
