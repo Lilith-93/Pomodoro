@@ -46,7 +46,8 @@ var sec = 0;
 				sec = 59;
 			}
 			$("#temps").text(min+'min '+sec+'sec.');
-			$(title).text(min+"'"+sec+'"');
+			$("title").text(min+"m"+sec+"s");
+			
 			
 			
 		}
